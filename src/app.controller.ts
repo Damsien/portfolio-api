@@ -6,13 +6,13 @@ import { SendMail } from './dto/send-mail.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/status')
   @HttpCode(200)
   getStatus() {
     return this.appService.getStatus();
   }
 
-  @Post()
+  @Post('/send')
   @HttpCode(201)
   sendMail(@Request() req, @Body() sendMail: SendMail) {
     return this.appService.sendMail(sendMail);
