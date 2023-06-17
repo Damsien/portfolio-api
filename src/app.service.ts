@@ -1,5 +1,5 @@
 import { MailerService } from '@nestjs-modules/mailer';
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { SendMail } from './dto/send-mail.dto';
 
 @Injectable()
@@ -22,6 +22,6 @@ export class AppService {
         html: `<h2>From ${sendMail.email}</h2><br /><p>${sendMail.message}</p>`, // HTML body content
       })
       .then(() => {})
-      .catch(() => {});
+      .catch((err) => {Logger.debug(err)});
   }
 }
