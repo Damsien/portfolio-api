@@ -15,6 +15,7 @@ export class AppController {
   @Post('/send')
   @HttpCode(201)
   sendMail(@Request() req, @Body() sendMail: SendMail) {
+    console.log(req)
     return this.appService.sendMail(sendMail);
   }
 }
