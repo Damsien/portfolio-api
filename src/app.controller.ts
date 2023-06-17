@@ -14,7 +14,7 @@ export class AppController {
 
   @Post('send')
   @HttpCode(201)
-  sendMail(@Query() body: SendMailDto) {
+  sendMail(@Body() body) {
     console.log(body)
     return this.appService.sendMail(body);
   }

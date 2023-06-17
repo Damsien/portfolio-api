@@ -4,15 +4,15 @@ import { IsEmail, IsNotEmpty, IsString } from "class-validator";
 
 export class SendMailDto {
 
-    // @IsString()
+    @IsString()
     @Type(() => String)
     name: string;
 
-    // @IsEmail()
+    @IsEmail()
     @Type(() => String)
     email: string;
 
-    // @IsString()
+    @IsString()
     @Type(() => String)
     message: string;
 

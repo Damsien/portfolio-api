@@ -13,7 +13,7 @@ export class AppService {
     };
   }
 
-  sendMail(sendMail: SendMailDto) {
+  sendMail(sendMail) {
     console.log(sendMail)
     this.mailerService
       .sendMail({
