@@ -13,7 +13,8 @@ export class AppService {
     };
   }
 
-  sendMail(sendMail) {
+  sendMail(body) {
+    const sendMail = JSON.parse(body)
     console.log(sendMail)
     this.mailerService
       .sendMail({
