@@ -1,4 +1,4 @@
-import { Request, Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
+import { Request, Body, Controller, Get, HttpCode, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { SendMail } from './dto/send-mail.dto';
 
@@ -14,8 +14,8 @@ export class AppController {
 
   @Post('/send')
   @HttpCode(201)
-  sendMail(@Request() req, @Body() sendMail: SendMail) {
-    console.log(req)
-    return this.appService.sendMail(sendMail);
+  sendMail(@Query() query: SendMail) {
+    console.log(query)
+    return this.appService.sendMail(query);
   }
 }
