@@ -1,6 +1,6 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable, Logger } from '@nestjs/common';
-import { SendMail } from './dto/send-mail.dto';
+import { SendMailDto } from './dto/send-mail.dto';
 
 @Injectable()
 export class AppService {
@@ -13,7 +13,7 @@ export class AppService {
     };
   }
 
-  sendMail(sendMail: SendMail) {
+  sendMail(sendMail: SendMailDto) {
     this.mailerService
       .sendMail({
         to: 'dassieu.damien@gmail.com', // list of receivers
