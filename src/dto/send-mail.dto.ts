@@ -1,18 +1,19 @@
 
+import { Type } from "class-transformer";
 import { IsEmail, IsNotEmpty, IsString } from "class-validator";
 
 export class SendMailDto {
 
     @IsString()
-    @IsNotEmpty()
+    @Type(() => String)
     name: string;
 
     @IsEmail()
-    @IsNotEmpty()
+    @Type(() => String)
     email: string;
 
     @IsString()
-    @IsNotEmpty()
+    @Type(() => String)
     message: string;
 
 }

@@ -6,15 +6,15 @@ import { SendMailDto } from './dto/send-mail.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('/status')
+  @Get('status')
   @HttpCode(200)
   getStatus() {
     return this.appService.getStatus();
   }
 
-  @Post('/send')
+  @Post('send')
   @HttpCode(201)
-  sendMail(@Body() body: SendMailDto) {
+  sendMail(@Query() body: SendMailDto) {
     console.log(body)
     return this.appService.sendMail(body);
   }
