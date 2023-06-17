@@ -19,8 +19,8 @@ export class AppService {
       .sendMail({
         to: 'dassieu.damien@gmail.com', // list of receivers
         from: 'no-reply@gmail.com', // sender address
-        subject: `Contact request - ${sendMail.name}`, // Subject line
-        html: `<h2>From ${sendMail.email}</h2><br /><p>${sendMail.message}</p>`, // HTML body content
+        subject: `Contact request - ${sendMail['name']}`, // Subject line
+        html: `<h2>From ${sendMail['email']}</h2><br /><p>${sendMail['message']}</p>`, // HTML body content
       })
       .then(() => {})
       .catch((err) => {Logger.debug(err)});
