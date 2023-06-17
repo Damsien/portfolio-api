@@ -14,6 +14,7 @@ export class AppService {
   }
 
   sendMail(sendMail: SendMailDto) {
+    console.log(sendMail)
     this.mailerService
       .sendMail({
         to: 'dassieu.damien@gmail.com', // list of receivers
