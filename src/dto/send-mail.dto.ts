@@ -3,16 +3,16 @@ import { IsEmail, IsNotEmpty, IsString } from "class-validator";
 
 export class SendMail {
 
-    @IsString()
-    @IsNotEmpty()
+    // @IsString()
+    // @IsNotEmpty()
     name: string;
 
-    @IsEmail()
-    @IsNotEmpty()
+    // @IsEmail()
+    // @IsNotEmpty()
     email: string;
 
-    @IsString()
-    @IsNotEmpty()
+    // @IsString()
+    // @IsNotEmpty()
     message: string;
 
 }
