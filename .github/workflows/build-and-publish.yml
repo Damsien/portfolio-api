@@ -31,7 +31,7 @@ jobs:
         with:
           platforms: linux/arm64
           # Note: tags has to be all lower-case
-          tags: ghcr.io/yltaros/portfolio-api:v1.0.0
+          tags: ghcr.io/damsien/portfolio-api:v1.0.0
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
